@@ -1,0 +1,86 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: excerpt
+        label: Excerpt
+      - type: image
+        name: image
+        label: Image
+  page_1:
+    type: page
+    label: Page 1
+    match: '*'
+    exclude:
+      - blog.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: object
+        name: sitemap
+        label: Sitemap
+        fields:
+          - type: number
+            name: priority
+            label: Priority
+            subtype: float
+          - type: date
+            name: lastmod
+            label: Lastmod
+          - type: string
+            name: changefreq
+            label: Changefreq
+  page_2:
+    type: page
+    label: Page 2
+    match:
+      - blog.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: description
+        label: Description
+      - type: object
+        name: sitemap
+        label: Sitemap
+        fields:
+          - type: number
+            name: priority
+            label: Priority
+            subtype: int
+          - type: date
+            name: lastmod
+            label: Lastmod
+          - type: string
+            name: changefreq
+            label: Changefreq
